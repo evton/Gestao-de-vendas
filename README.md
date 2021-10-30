@@ -5,7 +5,7 @@ Criei este projeto para ajudar um amigo que possui um pequeno comercio atacadist
 
  Tecnologias envolvidas no projeto
  <hr>
- <img src=”img/python.jpg”>
- <img src=”img/django.jpg”>
- <img src=”img/bootstrap.jpg”>
- <img src=”img/HTML5.jpg”>
+ <img src="img/python.jpg">
+ <img src="img/django.jpg">
+ <img src="img/bootstrap.jpg">
+ <img src="img/HTML5.jpg">
