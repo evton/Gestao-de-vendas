@@ -1,0 +1,14 @@
+li{
+    list-style-type: none;
+    margin-left: 0px;
+}
+.col-3{
+    background-color: aqua;
+    height: 100vh;
+}
+.col-9{
+    background-color: aquamarine;
+}
+.container{
+    background-color: blueviolet;
+}
