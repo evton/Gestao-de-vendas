@@ -2,13 +2,24 @@ li{
     list-style-type: none;
     margin-left: 0px;
 }
-.col-3{
+#sidebar{
     background-color: aqua;
     height: 100vh;
 }
-.col-9{
-    background-color: aquamarine;
+a{
+    text-decoration: none;
 }
-.container{
-    background-color: blueviolet;
+p{
+    font-weight: 800;
+    color: blue;
+    font-size: larger;
+}
+.fa-whatsapp{
+    color: greenyellow
+}
+.fa-telegram{
+    color:dodgerblue;
+}
+hr{
+    margin: 30px 0px;
 }
