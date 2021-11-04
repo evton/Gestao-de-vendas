@@ -1,36 +1,36 @@
-{% extends 'modelo.html' %}
+{% extends 'paginas/modelo.html' %}
 {% load static %}
 
 {% block titulo %}
-Cadastro
+<title>Cadastro</title>
 {% endblock %}
 
 {% block conteudo %}
-<h3>Cadastro de cliente</h3>
-<hr>
-<form>
+    <h3>Cadastro de cliente</h3>
+    <hr>
+<form method="post">
     <div class="form-group row">
-      <div class="col">
+      <div class="col-6">
         Nome
-        <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do cliente">
+        <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do cliente" required>
       </div>
-      <div class="col">
-        E-mail
-        <input class="form-control" type="text" name="nome" id="nome" placeholder="e-mail do cliente">
+      <div class="col-6">
+        Email
+        <input class="form-control" type="text" name="email" id="email" placeholder="Email do cliente">
       </div>
-    </div>
+      </div>
       <div class="row">
-          <div class="col-4">
+          <div class="col-3">
             Telefone
-            <input class="form-control" type="text" name="number" id="number" placeholder="(XX) XXXX-XXXX"><br>
+            <input class="form-control" type="text" name="number" id="number" placeholder="(XX) XXXX-XXXX" required><br>
             <label for="Whastapp"><i id="whats" class="fab fa-whatsapp fa-2x"></i></label>
             <input type="checkbox" name="Whastapp" id="Whastapp" value="Whatsapp">
             <label for="Telegram"><i class="fab fa-telegram fa-2x"></i></label>
             <input type="checkbox" name="Telegram" id="Telegram" value="Telegram">
-          </div>
-          <div class="col-2">
-            Loja
-            <input class="form-control" type="text" name="number" id="number" placeholder="Número"><br>
+            </div>
+            <div class="col-3">
+                Loja
+                <input class="form-control" type="number" name="number" id="number" placeholder="Número da loja" required><br>
           </div>
           <div class="col-6">
             Localização
@@ -44,7 +44,7 @@ Cadastro
             </select>
           </div>
       </div>
-
-    <br><button type="submit" class="btn btn-primary">Salvar</button>
+    <br>
+    <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
 {% endblock %}
