@@ -2,18 +2,41 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block titulo %}
-<title>Cadastro</title>
-{% endblock %}
+{% block titulo %} Cadastro {% endblock %}
 
 {% block conteudo %}
     <h3>Cadastro de cliente</h3>
     <hr>
     <form action="" method="post">
         {% csrf_token %}
-        {{ form|crispy }}
+        <div class="row">
+            <div class="form col-6">
+                {{ form.nome|as_crispy_field }}
+            </div>
+            <div class="form col-6">
+                {{ form.email|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form col-6">
+                {{ form.telefone|as_crispy_field }}
+                <label for="Whastapp"><i id="whats" class="fab fa-whatsapp fa-2x"></i></label>
+                <input type="checkbox" name="Whastapp" id="Whastapp" value="Whatsapp">
+                <label for="Telegram"><i class="fab fa-telegram fa-2x"></i></label>
+                <input type="checkbox" name="Telegram" id="Telegram" value="Telegram">
+            </div>
+            <div class="form col-1">
+                {{ form.loja|as_crispy_field }}
+            </div>
+            <div class="form col-5">
+                {{ form.localizacao|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            {{ form.observacao|as_crispy_field }}   
+        </div>
         <br>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <input class="btn btn-primary" type="submit" value="Salvar">
     </form>
 
 {% endblock %}

@@ -27,7 +27,6 @@ SECRET_KEY = config("SECRET_KEY")
 
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     'paginas',
     'cadastros',
     'crispy_forms',
+    'pedidos',
 ]
 #crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

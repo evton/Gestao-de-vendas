@@ -1,10 +1,15 @@
-from django.views.generic.edit import CreateView
-from .models import Cliente
-from django.urls import reverse_lazy
+from django.shortcuts import render, redirect
+from .forms import Clienteform
+
 
 # Create your views here.
-class ClienteCreate(CreateView):
-    model = Cliente
-    fields = ['nome', 'email', 'telefone', 'loja', 'localizacao']
-    Template_name = 'cadastros/cliente_form.html'
-    success_url = reverse_lazy('inicio')
+def novocliente(request):
+    form = Clienteform(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/cadastro')
+    context = {
+        "form": form,
+    }
+    return render(request, 'cadastros/cliente_form.html', context)
+

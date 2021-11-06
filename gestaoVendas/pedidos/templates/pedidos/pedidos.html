@@ -1,0 +1,16 @@
+{% extends 'paginas/modelo.html' %}
+{% load static %}
+
+{% block titulo %} Pedidos {% endblock %}
+
+{% block conteudo %}
+    <h3>Lista de Pedidos</h3>
+    <hr>
+    {% for dados in queryset %}
+        {{dados.pedido_numero}},
+        {{dados.pedido_data}},
+        {{dados.total}}
+        <br>
+    {% endfor %}
+    <a class="btn btn-primary" href="{% url 'novopedido' %}" role="button">Novo Pedido</a>
+{% endblock %}
